@@ -1,14 +1,22 @@
 import  express from "express";
-const port =8080;
+import cors from "cors";
+import cookieParser from "cookie-parser"
 const app=express();
 
 
+app.use(cors({
+    origin:process.env.CORS_ORIGIN,
+}));
 
+app.use(express.json());
 
+// this is to store the static files like imgs on the server here public is the folder name
+app.use(express.static("public"))
 
+app.use(cookieParser());
 
+export default app;
 
+ 
 
-app.listen(port,()=>{
-    console.log('server is up and running on the port')
-})
+ 
