@@ -27,4 +27,6 @@ try {
 }
 }
 
+export default fileUpload; 
+
 
