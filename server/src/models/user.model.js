@@ -17,13 +17,21 @@ const userSchema=new mongoose.Schema({
         lowercase:true,
         trim:true,
     },
+    phoneNo:{
+        type:String,
+        unique:true,
+        trim:true, 
+    },
     password:{
         type:String,
         required:true,
     },
-    profilePicture: {
+    profilePic: {
         type:String,  
         
+    },
+    refreshToken:{
+        type:String,
     }
 
 },{timestamps:true});

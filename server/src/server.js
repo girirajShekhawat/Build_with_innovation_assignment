@@ -10,6 +10,13 @@ app.use(cors({
 
 app.use(express.json());
 
+// importing the router
+import router from "./routes/user.routes.js";
+
+// defing the routes 
+app.use("/user", router)
+
+
 // this is to store the static files like imgs on the server here public is the folder name
 app.use(express.static("public"))
 
